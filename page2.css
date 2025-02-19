@@ -1,0 +1,76 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Full Page Background */
+body {
+    background: url('bgbday.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Title Styling */
+.title {
+    font-size: 55px;
+    color: #ff3366;
+    text-shadow: 4px 4px 12px rgba(255, 20, 147, 0.9);
+    animation: titleGlow 2s infinite alternate;
+    text-align: center;
+}
+
+/* Centered Video Block */
+.container {
+    background: rgba(255, 182, 193, 0.85); /* Soft pink background */
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Video Styling */
+.birthday-video {
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+}
+
+/* Floating Hearts Around Video */
+.heart {
+    position: absolute;
+    font-size: 45px;
+    color: #ff69b4;
+    animation: floatingHearts 3s infinite alternate;
+}
+
+.heart1 { top: -50px; left: -35px; transform: rotate(-15deg); }
+.heart2 { top: -50px; right: -35px; transform: rotate(15deg); }
+.heart3 { bottom: -50px; left: -60px; transform: rotate(-10deg); }
+.heart4 { bottom: -50px; right: -60px; transform: rotate(10deg); }
+.heart5 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-5deg); }
+
+/* Floating Heart Animation */
+@keyframes floatingHearts {
+    0% { transform: translateY(0px) scale(1); opacity: 1; }
+    100% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
+}
+
+/* Glowing Title Animation */
+@keyframes titleGlow {
+    0% { text-shadow: 4px 4px 12px rgba(255, 20, 147, 0.7); }
+    100% { text-shadow: 6px 6px 15px rgba(255, 0, 100, 1); }
+}
+
+/* Fade-In Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
