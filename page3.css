@@ -1,9 +1,8 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Import Romantic Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-/* Full Page Background */
 body {
-    background: url('bgbday.jpg') no-repeat center center fixed;
+    background: url('hearts-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -11,9 +10,10 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Great Vibes', cursive;
     color: #fff;
-    overflow: hidden;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Title Styling */
@@ -22,40 +22,60 @@ body {
     color: #ff3366;
     text-shadow: 4px 4px 12px rgba(255, 20, 147, 0.9);
     animation: titleGlow 2s infinite alternate;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Centered Video Block */
+/* Centered Block for Image */
 .container {
     background: rgba(255, 182, 193, 0.85); /* Soft pink background */
-    padding: 25px;
+    padding: 30px;
     border-radius: 20px;
-    text-align: center;
-    position: relative;
     box-shadow: 0 0 25px rgba(255, 105, 180, 0.9);
+    position: relative;
     animation: fadeIn 2s ease-in-out;
+    max-width: 900px; /* Restrict max width */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Video Styling */
-.birthday-video {
-    width: 420px;
+/* Birthday Photo Styling */
+.birthday-photo {
+    width: 100%;
+    max-width: 850px; /* Restrict image size */
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
 }
 
-/* Floating Hearts Around Video */
+/* Floating Hearts Around Image */
 .heart {
     position: absolute;
-    font-size: 45px;
+    font-size: 50px;
     color: #ff69b4;
     animation: floatingHearts 3s infinite alternate;
 }
 
-.heart1 { top: -50px; left: -35px; transform: rotate(-15deg); }
-.heart2 { top: -50px; right: -35px; transform: rotate(15deg); }
+.heart1 { top: -50px; left: -40px; transform: rotate(-15deg); }
+.heart2 { top: -50px; right: -40px; transform: rotate(15deg); }
 .heart3 { bottom: -50px; left: -60px; transform: rotate(-10deg); }
 .heart4 { bottom: -50px; right: -60px; transform: rotate(10deg); }
 .heart5 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-5deg); }
+
+/* Romantic Paragraph */
+.message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f9046e;
+    text-shadow: 2px 2px 8px rgba(255, 20, 147, 0.8);
+    max-width: 900px;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 20, 147, 0.3);
+    border-radius: 15px;
+}
 
 /* Floating Heart Animation */
 @keyframes floatingHearts {
@@ -63,7 +83,7 @@ body {
     100% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
 }
 
-/* Glowing Title Animation */
+/* Glowing Title */
 @keyframes titleGlow {
     0% { text-shadow: 4px 4px 12px rgba(255, 20, 147, 0.7); }
     100% { text-shadow: 6px 6px 15px rgba(255, 0, 100, 1); }
@@ -73,27 +93,4 @@ body {
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Stylish Button */
-.next-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff3366, #ff6699);
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.7);
-    transition: 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.next-button:hover {
-    background: linear-gradient(45deg, #ff6699, #ff3366);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.9);
 }
